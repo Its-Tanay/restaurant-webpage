@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    position: relative;
+    box-sizing: border-box;
+    padding: none;
+}
+
+/* LOADING PAGE */
+
+html, body, #content, #main{
+    min-height: 100%;
+    width: 100%;
+}
+
+#content{
+    display: grid;
+    grid-template-rows: auto 10rem;
+}
+
+.header-nav{
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+    background-color: transparent;
+}
+
+.header-nav > button{
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #FF6000;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 1.3rem;
+    z-index: 9999;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    background-color: #FF6000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#footer-text{
+    font-family: 'Rubik Mono One', sans-serif;
+    display: flex;
+    gap: 1rem;
+}
+
+#git-link{
+    text-decoration: none;
+    color: #FFE6C7;
+}
+
+#credit-text{
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 0.6rem;
+}
+
+/*PAGE-1 (HOME)*/
+
+#home-sec-1{
+    height: 30rem;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));;
+}
+
+.restaurant-name > h1{
+    color: #FFA559;
+    font-size: 6rem;
+    font-family: 'Racing Sans One', cursive;
+}
+
+#home-sec-1::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../imgs/home-sec1.jpg); /*Photo by <a href="https://unsplash.com/pt-br/@carinahornphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Carina Horn</a> on <a href="https://unsplash.com/photos/Zl1ldWOY6R4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+#home-sec-2{
+    height: 54rem;
+    background-color: #FFE6C7;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5rem;
+    padding: 5rem;
+}
+
+#review-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 6rem;
+
+}
+
+#review-1 > img{
+    height: 20rem;
+    width: 40rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#review-text{
+    font-size: 1.8rem;
+    font-family: 'Petit Formal Script', cursive;
+}
+
+#review-2{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 6rem;
+}
+
+#review-2 > img{
+    height: 20em;
+    width: 55em; /* Photo by <a href="https://unsplash.com/@shawnanggg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">shawnanggg</a> on <a href="https://unsplash.com/photos/nmpW_WwwVSc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#home-sec-3{
+    height: 50rem;
+    background-color: #FFA559;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#home-sec-3 > h2{
+    color: black;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 2.5rem;
+    text-decoration-line: overline;
+    text-decoration-color: #FF6000;
+}
+
+#home-sec-3 > img{
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#home-sec-3 > p{
+    font-size: 1.2rem;
+    font-family: 'Petit Formal Script', cursive;
+    text-align: center;
+    width: 60%;
+}
+
+/*PAGE-2 (MENU)*/
+
+
+#menu-page-header{
+    height: 30rem;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+
+#menu-page-header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../imgs/menu-sec1-cover.jpg); /*Photo by <a href="https://unsplash.com/pt-br/@carinahornphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Carina Horn</a> on <a href="https://unsplash.com/photos/Zl1ldWOY6R4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+#menu-page-header > h1{
+    color: #FFA559;
+    font-size: 6rem;
+    font-family: 'Racing Sans One', cursive;
+}
+
+#menu-sec-1{
+    height: 65rem;
+    background-color: #FFE6C7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 4rem;
+}
+
+#menu-sec-1 > h2{
+    color: black;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 2.5rem;
+    text-decoration-line: overline;
+    text-decoration-color: #FF6000;
+}
+
+#item{
+    width: 60%;
+    display: grid;
+    grid-template-columns: auto 50% auto;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+#item > img{
+    height: 15rem;
+    width: 15rem;
+}
+
+#menu-sec-1 #item:nth-child(3) > img {
+    height: 12rem;
+    width: 15rem;
+}
+
+#menu-sec-1 #item:nth-child(5) > img {
+    height: 12rem;
+    width: 15rem;
+}
+
+#item-details > h3{
+    font-family: 'Racing Sans One', cursive;
+    font-size: 2rem;
+}
+
+#item-details > p {
+    font-family: 'Petit Formal Script', cursive;
+}
+
+#item > h4 {
+    font-family: 'Marcellus SC', serif;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+#menu-sec-2{
+    height: 40rem;
+    background-color: #FFE6C7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 4rem;
+}
+
+#menu-sec-2 > h2{
+    color: black;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 2.5rem;
+    text-decoration-line: overline;
+    text-decoration-color: #FF6000;
+}
+
+#menu-sec-2 #item:nth-child(2) > img{
+    height: 10rem;
+    width: 15rem;
+}
+
+#menu-sec-2 #item:nth-child(3) > img{
+    height: 10rem;
+    width: 15rem;
+}
+
+#menu-sec-3{
+    height: 40rem;
+    background-color: #FFE6C7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 4rem;
+}
+
+#menu-sec-3 > h2{
+    color: black;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 2.5rem;
+    text-decoration-line: overline;
+    text-decoration-color: #FF6000;
+}
+
+#menu-sec-3 #item:nth-child(2) > img{
+    height: 10rem;
+    width: 14rem;
+}
+
+#menu-sec-3 #item:nth-child(3) > img{
+    height: 10rem;
+    width: 6rem;
+    margin-left: 4.5rem;
+}
+
+#menu-sec-3 #item:nth-child(3) > #item-details{
+    margin-left: 3rem;
+}
+
+#menu-sec-3 #item:nth-child(3) > h4{
+    margin-left: 3rem;
+}
+
+/* PAGE-4 (CONTACT) */
+
+#contact-sec-1{
+    height: 30rem;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+
+#contact-sec-1::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../imgs/contact-sec-1.jpg); /*Photo by <a href="https://unsplash.com/pt-br/@carinahornphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Carina Horn</a> on <a href="https://unsplash.com/photos/Zl1ldWOY6R4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+#visit-us{
+    color: #FFA559;
+    font-size: 6rem;
+    font-family: 'Racing Sans One', cursive;
+}
+
+#contact-sec-2{
+    height: 25rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    padding: 4rem;
+    background-color: #FFE6C7;
+    gap:4rem;
+}
+
+#card{
+    height: 100%;
+    width: 100%;
+    background-color: #FFA559;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card-header{
+    font-family: 'Racing Sans One', cursive;
+    font-size: 3em;
+    text-decoration: overline;
+    text-decoration-color: #FF6000;
+}
+
+.card-text{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.card-text > p{
+    font-family: 'Marcellus SC', serif; 
+    font-size: 1.4rem;
+}
+
+#line12{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+#line21{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#line22{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img:hover{
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#card:hover{
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.header-nav > button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.1s ease;
+}
+    
