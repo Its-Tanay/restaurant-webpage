@@ -25,7 +25,7 @@ function createSection2 () {
 
     const img1 = document.createElement('img');
     img1.setAttribute('id', 'review-img-1');
-    img1.setAttribute('src', '../imgs/review-1.jpg');
+    img1.setAttribute('src', './imgs/review-1.jpg');
 
     const text1 = document.createElement('p');
     text1.setAttribute('id', 'review-text');
@@ -39,7 +39,7 @@ function createSection2 () {
 
     const img2 = document.createElement('img');
     img2.setAttribute('id', 'review-img-2');
-    img2.setAttribute('src', '../imgs/review-2.jpg');
+    img2.setAttribute('src', './imgs/review-2.jpg');
 
     const text2 = document.createElement('p');
     text2.setAttribute('id', 'review-text');
@@ -65,7 +65,7 @@ function createSection3 () {
 
     const img = document.createElement('img');
     img.setAttribute('id', 'chef-img');
-    img.setAttribute('src', '../imgs/chef-img.jpg');
+    img.setAttribute('src', './imgs/chef-img.jpg');
 
     const text = document.createElement('p');
     text.setAttribute('id', 'chef-text');
