@@ -23,17 +23,17 @@ Make sure you have Node.js and npm (Node Package Manager) installed on your mach
 
 1. Clone the repository to your local machine using the following command:
 
-git clone https://github.com/Its-Tanay/restaurant-webpage.git
+`git clone https://github.com/Its-Tanay/restaurant-webpage.git`
 
 
 2. Navigate to the project directory:
 
-cd your-project
+`cd your-project`
 
 
 3. Install the project dependencies using npm:
 
-npm install
+`npm install`
 
 
 ### Build
@@ -51,8 +51,7 @@ During development, you can use the webpack-dev-server to serve your application
 
 To start the development server, run the following command:
 
-npm run dev
-
+`npm run dev`
 
 This will start the development server and open your application in the browser. Any changes you make to your source code will automatically trigger a rebuild and update the browser.
 
