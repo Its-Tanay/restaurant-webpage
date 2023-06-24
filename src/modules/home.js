@@ -7,11 +7,11 @@ function createSection1 () {
 
     const title = document.createElement('h1');
     title.setAttribute('id', 'title');
-    title.innerText = 'The Restaurant';
+    title.innerText = 'Bulgar Scenes';
 
-    title.appendChild(name);
+    name.appendChild(title);
 
-    section1.appendChild(title);
+    section1.appendChild(name);
 
     return section1;
 }
@@ -25,11 +25,11 @@ function createSection2 () {
 
     const img1 = document.createElement('img');
     img1.setAttribute('id', 'review-img-1');
-    img1.setAttribute('src', '#');
+    img1.setAttribute('src', '../imgs/review-1.jpg');
 
     const text1 = document.createElement('p');
-    text1.setAttribute('id', 'review-text-1');
-    text1.innerText = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ea harum quidem quod molestiae fuga dolorem, minus consectetur libero tenetur iure corrupti sunt voluptas dolores sapiente culpa sit quae velit?';
+    text1.setAttribute('id', 'review-text');
+    text1.innerText = '" Unparalleled burger experience! Perfectly seasoned patties, fluffy buns, and irresistible toppings create a flavor explosion. The \'Bulgar Surprise\' sauce sets them apart. Excellent service, crispy fries, and creamy milkshakes complete the perfection."';
 
     review1.appendChild(img1);
     review1.appendChild(text1);
@@ -39,11 +39,11 @@ function createSection2 () {
 
     const img2 = document.createElement('img');
     img2.setAttribute('id', 'review-img-2');
-    img2.setAttribute('src', '#');
+    img2.setAttribute('src', '../imgs/review-2.jpg');
 
     const text2 = document.createElement('p');
-    text2.setAttribute('id', 'review-text-2');
-    text2.innerText = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ea harum quidem quod molestiae fuga dolorem, minus consectetur libero tenetur iure corrupti sunt voluptas dolores sapiente culpa sit quae velit?';
+    text2.setAttribute('id', 'review-text');
+    text2.innerText = '" Captivating ambience, culinary oasis! Happy cows, sizzling patties, and a mesmerizing atmosphere. Flavors and surroundings blend, creating an unforgettable experience."';
 
     review2.appendChild(img2);
     review2.appendChild(text2);
@@ -61,14 +61,15 @@ function createSection3 () {
 
     const chefName = document.createElement('h2');
     chefName.setAttribute('id', 'chef-name');
+    chefName.innerText = 'Chef Booger'
 
     const img = document.createElement('img');
     img.setAttribute('id', 'chef-img');
-    img.setAttribute('src', '#');
+    img.setAttribute('src', '../imgs/chef-img.jpg');
 
     const text = document.createElement('p');
     text.setAttribute('id', 'chef-text');
-    text.innerText = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ea harum quidem quod molestiae fuga dolorem, minus consectetur libero tenetur iure corrupti sunt voluptas dolores sapiente culpa sit quae velit?';
+    text.innerText = 'Meet Chef Booger, a boundary-pushing culinary genius specializing in bold and innovative Bulgarian cuisine. Prepare for an unforgettable gastronomic journey as he masterfully combines unexpected flavors, redefining traditional dishes with his tantalizing creations.';
 
     section3.appendChild(chefName);
     section3.appendChild(img);

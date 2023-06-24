@@ -34,8 +34,13 @@ function createFooter (){
     gitlink.setAttribute('href', 'https://github.com/Its-Tanay');
     gitlink.innerText = '@Its-Tanay';
 
+    const credits = document.createElement('a');
+    credits.setAttribute('id', 'credit-text');
+    credits.innerText = 'Credits for used images in the README file';
+
     footerText.appendChild(gitlink);
     footer.appendChild(footerText);
+    footer.appendChild(credits);
 
     return footer;
 }

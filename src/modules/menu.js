@@ -20,6 +20,9 @@ function createMenuItems(name, link, text, price) {
     const image = document.createElement('img');
     image.setAttribute('src', link);
 
+    const details = document.createElement('div');
+    details.setAttribute('id', 'item-details');
+
     const itemName = document.createElement('h3');
     itemName.innerText = name;
 
@@ -29,34 +32,41 @@ function createMenuItems(name, link, text, price) {
     const itemPrice = document.createElement('h4');
     itemPrice.innerText = price;
 
+    details.appendChild(itemName);
+    details.appendChild(itemDesc);
+
     item.appendChild(image);
-    item.appendChild(itemName);
-    item.appendChild(itemDesc);
+    item.appendChild(details);
     item.appendChild(itemPrice);
 
     return item;
 }
+  
+  function createBurgersSection() {
 
-function createStartersSection() {
-    const section = createMenuSection('menu-sec-1', 'Starters');
+    const section = createMenuSection('menu-sec-1', 'Burgers');
   
-    const starter1 = createMenuItems('starter1', '#', 'text1', 'price1');
-    const starter2 = createMenuItems('starter2', '#', 'text2', 'price2');
+    const burger1 = createMenuItems('Fiery Chicken', '../imgs/burger1.png', 'A fiery, juicy chicken breast with crisp lettuce, tomato, and mayo, fulfilling your ultimate craving.', '179 INR');
+    const burger2 = createMenuItems('Veggie Popper', '../imgs/burger2.png', 'A delectable black bean patty infused with chickpeas, veggies, cheese, tomatoes, lettuce, and curry mayo on a premium bun.', '149 INR');
+    const burger3 = createMenuItems('Cheeseburger Deluxe', '../imgs/burger3.png', 'Fresh British beef topped with cheese, pickles, onions, tomatoes, crisp lettuce, ketchup, and mayo.', '249 INR');
+    const burger4 = createMenuItems('Chicken Club', '../imgs/burger4.png', 'Juicy chicken, bacon, avocado, lettuce, tomato, mayo on a toasted bun.', '199 INR');
   
-    section.appendChild(starter1);
-    section.appendChild(starter2);
+    section.appendChild(burger1);
+    section.appendChild(burger2);
+    section.appendChild(burger3);
+    section.appendChild(burger4);
   
     return section;
   }
+
+  function createSidesSection() {
+    const section = createMenuSection('menu-sec-2', 'Starters');
   
-  function createMainCourseSection() {
-    const section = createMenuSection('menu-sec-2', 'Main Course');
+    const side1 = createMenuItems('Chili Cheese Fries', '../imgs/side-1.png', 'Our natural-cut, skin-on, sea-salted fries topped our hearty chili and warm, creamy cheese sauce,  and shredded cheddar cheese', '149 INR');
+    const side2 = createMenuItems('Chicken Nuggets', '../imgs/side2.png', '8 Pieces of chicken fillet lightly breaded for a crispy outer, then fried to seal in the juicy goodness', '189 INR');
   
-    const main1 = createMenuItems('main1', '#', 'text1', 'price1');
-    const main2 = createMenuItems('main2', '#', 'text2', 'price2');
-  
-    section.appendChild(main1);
-    section.appendChild(main2);
+    section.appendChild(side1);
+    section.appendChild(side2);
   
     return section;
   }
@@ -64,8 +74,8 @@ function createStartersSection() {
   function createDrinksSection() {
     const section = createMenuSection('menu-sec-3', 'Drinks');
   
-    const drink1 = createMenuItems('drink1', '#', 'text1', 'price1');
-    const drink2 = createMenuItems('drink2', '#', 'text2', 'price2');
+    const drink1 = createMenuItems('Coke Zero', '../imgs/drink1.png', 'The perfect diet companion to your burger, fries and everything nice. Regular serving size, 300 Ml.', '59 INR');
+    const drink2 = createMenuItems('Mineral Water', '../imgs/drink2.png', 'Water Bottle', '29 INR');
   
     section.appendChild(drink1);
     section.appendChild(drink2);
@@ -73,38 +83,23 @@ function createStartersSection() {
     return section;
   }
   
-  function createDessertsSection() {
-    const section = createMenuSection('menu-sec-4', 'Desserts');
-  
-    const dessert1 = createMenuItems('dessert1', '#', 'text1', 'price1');
-    const dessert2 = createMenuItems('dessert2', '#', 'text2', 'price2');
-  
-    section.appendChild(dessert1);
-    section.appendChild(dessert2);
-  
-    return section;
-  }
-  
-  function createMenu() {
-    const sections = {
-      firstSection: createStartersSection(),
-      secondSection: createMainCourseSection(),
-      thirdSection: createDrinksSection(),
-      fourthSection: createDessertsSection(),
-    };
-  
-    return sections;
-  }  
 
 function loadMenu() {
     const main = document.getElementById('main');
 
     main.innerHTML = '';
 
-    main.appendChild(createStartersSection());
-    main.appendChild(createMainCourseSection());
+    const header = document.createElement('div');
+    header.setAttribute('id', 'menu-page-header');
+    const headerText = document.createElement('h1');
+    headerText.setAttribute('id', 'menu-header-text');
+    headerText.innerText = 'Menu';
+    header.appendChild(headerText)
+
+    main.appendChild(header);
+    main.appendChild(createBurgersSection());
+    main.appendChild(createSidesSection());
     main.appendChild(createDrinksSection());
-    main.appendChild(createDessertsSection());
 }
 
 export default loadMenu;
